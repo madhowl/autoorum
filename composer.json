@@ -1,0 +1,21 @@
+{
+    "name": "madhowl/autoorum",
+    "license": "MIT",
+    "type": "project",
+    "scripts": {
+        "serve": "@php -S localhost:8000 -t web/"
+    },
+    "autoload": {
+        "psr-4": {
+            "AutoOrum\\": "src/AutoOrum/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "twig/twig": "^3.2",
+        "opis/database": "^4.3",
+        "vlucas/phpdotenv": "^5.6",
+        "filp/whoops": "^2.16",
+        "miladrahimi/phprouter": "^5.1"
+    }
+}
