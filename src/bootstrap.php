@@ -42,6 +42,10 @@ $router->setContainer($container);
 
 
 $router->get('/', [HomeController::class, 'index']);
+$router->get('/api/get_companies', [HomeController::class, 'get_companies']);
+$router->get('/api/get_models/{company_id}', [HomeController::class, 'get_models']);
+$router->get('/api/get_years/{model_id}', [HomeController::class, 'get_years']);
+$router->get('/api/get_configurations/{car_id}', [HomeController::class, 'get_configurations']);
 
 
 $router->dispatch();

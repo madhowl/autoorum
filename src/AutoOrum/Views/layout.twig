@@ -1,16 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-</head>
-<body>
+    <title>Title</title>
 
-    <div class="container">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="Assets\output2.css">
+    <style type="text/css">
+        .fade-enter-active, .fade-leave-active {
+            transition: all 1s;
+        }
+
+        .fade-enter, .fade-leave-to {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        .fadeTwo-move, /* apply transition to moving elements */
+        .fadeTwo-enter-active,
+        .fadeTwo-leave-active {
+            transition: opacity 0.3s ease;
+        }
+
+        .fadeTwo-enter-from,
+        .fadeTwo-leave-to {
+            opacity: 0;
+        }
+
+        .fadeTwo-enter-to,
+        .fadeTwo-leave-from {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body class="bg-bg-black">
+
+
         {% block content %}
         {% endblock %}
-    </div>
-
 </body>
+
+<!--<script src="Assets/vue.min.js"></script>-->
+<script src="Assets/DEVvue.min.js"></script>
+<script src="Assets/main.js?1"></script>
+
 </html>

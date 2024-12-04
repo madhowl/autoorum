@@ -49,6 +49,27 @@ class Car
             ->fetchAssoc()
             ->all();
     }
+    public function getmodels($compani_id): array
+    {
+        return $this->db->from($this->table)
+            ->where('company_id')->is($compani_id)
+            ->select()
+            ->all();
+    }
+    public function getyears($model_id): array
+    {
+        return $this->db->from($this->table)
+            ->where('model_id')->is($model_id)
+            ->select()
+            ->all();
+    }
+    public function getconfigurations($car_id): array
+    {
+        return $this->db->from($this->table)
+            ->where('car_id')->is($car_id)
+            ->select()
+            ->all();
+    }
 
     public function find(int $id): mixed
     {
