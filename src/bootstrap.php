@@ -24,7 +24,7 @@ $container->singleton(
 );
 $container->singleton(
     Database::class,
-    fn($connection) => new Database($connection)
+    fn() => new Database($container->get('$connection'))
 );
 $container->singleton(
     '$template_path',
@@ -32,10 +32,10 @@ $container->singleton(
 );
 $container->singleton(
     '$twig_loader',
-    fn($template_path) => new FilesystemLoader($template_path)
+    fn() => new FilesystemLoader($container->get('$template_path'))
 );
 $container->singleton(Environment::class,
-    fn($twig_loader) => new Environment($twig_loader)
+    fn() => new Environment($container->get('$twig_loader'))
 );
 
 $router->setContainer($container);
